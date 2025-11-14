@@ -9,7 +9,7 @@ api_key = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=api_key)
 
 # Importar dataset
-df = pd.read_csv('spotify_2023.csv')
+df = pd.read_csv('anime.csv')
 
 # Usar solo las primeras 100 filas
 df_subset = df.head(150)
@@ -46,6 +46,7 @@ if user_input:
     answer = response.choices[0].message.content
     st.subheader("Respuesta:")
     st.write(answer)
+
 
 
 
